@@ -1,14 +1,16 @@
 <template>
-  <div class="home">
+  <div class="app">
+    <div class="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/">About</router-link>
+      <router-link to="/">Profile</router-link>
+    </div>
     <h1>Hello world</h1>
   </div>
 </template>
 
-<script setup>
-export default {
-  name: "home",
-  components: {},
-};
-</script>
-
-<style></style>
+<style>
+h1 {
+  color: red;
+}
+</style>
