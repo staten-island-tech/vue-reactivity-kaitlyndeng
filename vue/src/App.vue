@@ -5,11 +5,12 @@
       <router-link to="/">About</router-link>
       <router-link to="/">Profile</router-link>
     </div>
+    <router-view />
     <h1>Hello world</h1>
   </div>
 </template>
 
-<style>
+<style scoped>
 h1 {
   color: red;
 }
