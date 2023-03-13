@@ -1,16 +1,23 @@
 <template>
-  <div class="home">
-    <h1 v-if="vegan">{{ flavor }}</h1>
-    <h1 v-else>"This flavor is not vegan."</h1>
-    <ul>
-      <li v-for="topping in toppings" :key="topping">{{ topping }}</li>
-    </ul>
+  <div class="base">
+    <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
+    <label for="chocolate">Chocolate</label>
+    <input type="checkbox" id="vanilla" value="vanilla" v-model="flavors" />
+    <label for="vanilla">Vanilla</label>
+    <input
+      type="checkbox"
+      id="strawberry"
+      value="strawberry"
+      v-model="flavors"
+    />
+    <label for="strawberry">Strawberry</label>
+    <br />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: "Base",
   components: {},
   data() {
     return {
