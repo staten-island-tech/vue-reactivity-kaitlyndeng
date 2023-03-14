@@ -2,8 +2,10 @@
   <div class="base">
     <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
     <label for="chocolate">Chocolate</label>
+    <br />
     <input type="checkbox" id="vanilla" value="vanilla" v-model="flavors" />
     <label for="vanilla">Vanilla</label>
+    <br />
     <input
       type="checkbox"
       id="strawberry"

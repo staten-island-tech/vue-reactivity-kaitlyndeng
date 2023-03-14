@@ -3,15 +3,15 @@
     <div class="nav">
       <router-link to="/">Base</router-link>
       <router-link to="/">Toppings</router-link>
-      <router-link to="/">Profile</router-link>
+      <router-link to="/">Confirmation</router-link>
     </div>
     <router-view />
-    <h1>Hello world</h1>
+    <h1></h1>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  color: red;
+  color: rgb(0, 0, 0);
 }
 </style>
