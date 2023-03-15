@@ -1,5 +1,5 @@
 <template>
-  <div class="base">
+  <div class="tab">
     <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
     <label for="chocolate">Chocolate</label>
     <br />
@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   name: "Base",
   components: {},
@@ -29,6 +29,6 @@ export default {
     };
   },
 };
-</script>
+</script> -->
 
 <style></style>

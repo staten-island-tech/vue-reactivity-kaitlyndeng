@@ -1,5 +1,5 @@
 <template>
-  <div class="toppings">
+  <div class="tab">
     <h1>Add toppings here</h1>
   </div>
 </template>
