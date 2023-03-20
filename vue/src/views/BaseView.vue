@@ -1,6 +1,8 @@
 <template>
-  <div class="tab">
-    <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
+  <div class="base">
+    <h1 v-if="vegan">{{ flavor }}</h1>
+    <h1 v-else>Not vegan.</h1>
+    <!-- <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
     <label for="chocolate">Chocolate</label>
     <br />
     <input type="checkbox" id="vanilla" value="vanilla" v-model="flavors" />
@@ -13,11 +15,11 @@
       v-model="flavors"
     />
     <label for="strawberry">Strawberry</label>
-    <br />
+    <br /> -->
   </div>
 </template>
 
-<!-- <script>
+<script>
 export default {
   name: "Base",
   components: {},
@@ -29,6 +31,6 @@ export default {
     };
   },
 };
-</script> -->
+</script>
 
 <style></style>
