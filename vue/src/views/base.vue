@@ -1,13 +1,16 @@
 <template>
   <div class="base">
+    <h1>Choose all your flavors.</h1>
+    <h2>1 flavor = 1 scoop</h2>
     <div v-for="flavor in flavors" :key="flavor">
-      {{ flavor }}
+      {{ flavor.type }}
     </div>
+    <!-- <div class="vegan">
+      <h2 v-if="vegan">{{ flavor.type }}</h2>
+      <h2 v-else>Not vegan.</h2>
+    </div> -->
 
-    <!-- <h1 v-if="vegan">{{ flavor }}</h1>
-    <h1 v-else>Not vegan.</h1> -->
-
-    <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
+    <!-- <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
     <label for="chocolate">Chocolate</label>
     <br />
     <input type="checkbox" id="vanilla" value="vanilla" v-model="flavors" />
@@ -20,7 +23,7 @@
       v-model="flavors"
     />
     <label for="strawberry">Strawberry</label>
-    <br />
+    <br /> -->
   </div>
 </template>
 
@@ -31,12 +34,12 @@ export default {
   data() {
     return {
       flavors: [
-        "vanilla",
-        "strawberry",
-        "chocolate",
-        "cookies n' cream",
-        "rum raisin",
-        "rocky road",
+        { type: "vanilla", vegan: "true", desc: "desc" },
+        { type: "strawberry", vegan: "true", desc: "desc" },
+        { type: "chocolate", vegan: "false", desc: "desc" },
+        { type: "cookies n' cream", vegan: "false", desc: "desc" },
+        { type: "rum raisin", vegan: "true", desc: "desc" },
+        { type: "rocky road", vegan: "false", desc: "desc" },
       ],
     };
   },

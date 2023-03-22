@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Base</router-link> |
-      <router-link to="/ToppingsView">Toppings</router-link> |
-      <router-link to="/ConfirmationView">Confirmation</router-link>
+      <router-link to="/toppings">Toppings</router-link> |
+      <router-link to="/confirmation">Confirmation</router-link>
     </div>
     <router-view />
   </div>

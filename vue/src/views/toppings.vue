@@ -1,15 +1,27 @@
 <template>
-  <div class="tab">
+  <div class="toppings">
     <h1>Add toppings here</h1>
+    <div v-for="topping in toppings" :key="topping">
+      {{ topping }}
+    </div>
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script>
+export default {
+  name: "toppings",
+  components: {},
+  data() {
+    return {
+      toppings: [
+        "chocolate chips",
+        "sprinkles",
+        "Oreos",
+        "fudge",
+        "M&Ms",
+        "chopped nuts",
+      ],
+    };
+  },
+};
+</script>
+<style></style>
