@@ -1,40 +1,16 @@
-<script>
-export default {
-  name: "base",
-  components: {},
-  data() {
-    return {
-      flavors: [
-        {
-          type: "vanilla",
-          vegan: "true",
-          desc: "desc",
-          img: <a ref src="https://www.rachelcooks.com/wp-content/uploads/2022/05/no-churn-vanilla-ice-cream-1500R-13-square.jpg">,
-        },
-        { type: "strawberry", vegan: "true", desc: "desc" },
-        { type: "chocolate", vegan: "false", desc: "desc" },
-        { type: "cookies n' cream", vegan: "false", desc: "desc" },
-        { type: "rum raisin", vegan: "true", desc: "desc" },
-        { type: "rocky road", vegan: "false", desc: "desc" },
-      ],
-    };
-  },
-};
-</script>
 <template>
   <div class="base">
     <h1>Choose all your flavors.</h1>
     <h2>1 flavor = 1 scoop</h2>
     <div class="flavors"></div>
-    <div v-for="flavor in flavors" :key="flavor">
-      <div class="card">
-        <h3>
-          <b>{{ flavor.type }}</b>
-        </h3>
-        <p>{{ flavor.desc }}</p>
-        {{ flavor.img }}
-      </div>
+    <Card v-for="flavor in flavors" :key="flavor" />
+    <div class="card">
+      <h3>
+        <b>{{ flavor.type }}</b>
+      </h3>
+      <p>{{ flavor.desc }}</p>
     </div>
+
     <!-- <div class="vegan">
       <h2 v-if="vegan === 'true'">{{ flavors.type }}</h2>
       <h2 v-else>Not vegan.</h2>
@@ -57,4 +33,33 @@ export default {
     <div :style="styleObject"></div>
   </div>
 </template>
+
+<script>
+import Card from "../components/Card.vue";
+export default {
+  name: "base",
+  components: {},
+  data() {
+    return {
+      flavors: [
+        {
+          type: "Vanilla",
+          vegan: "true",
+          desc: "Classic Vanilla",
+          img: "https://www.eatthis.com/wp-content/uploads/sites/4/2022/06/vanilla-ice-cream.jpg?quality=82&strip=all",
+        },
+        { type: "Strawberry", vegan: "true", desc: "desc" },
+        {
+          type: "Chocolate",
+          vegan: "false",
+          desc: "Made with dark chocolate.",
+        },
+        { type: "Cookies n' Cream", vegan: "false", desc: "desc" },
+        { type: "Rum Raisin", vegan: "true", desc: "desc" },
+        { type: "Rocky Road", vegan: "false", desc: "desc" },
+      ],
+    };
+  },
+};
+</script>
 <style></style>
