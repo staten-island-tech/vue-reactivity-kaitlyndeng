@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div class="nav">
       <router-link to="/">Base</router-link> |
       <router-link to="/toppings">Toppings</router-link> |
       <router-link to="/confirmation">Confirmation</router-link>
@@ -10,7 +10,7 @@
 </template>
 
 <style scoped>
-h1 {
+.nav {
   color: rgb(0, 0, 0);
 }
 </style>
