@@ -1,9 +1,7 @@
 <template>
   <div class="card">
     <h3>{{ title }}</h3>
-    <div class="image">
-      <image :src="image" alt="" />
-    </div>
+    <image :src="image" alt="" />
     <h4>{{ desc }}</h4>
   </div>
 </template>
@@ -28,7 +26,7 @@ export default {
   text-align: center;
   color: black;
 }
-.image {
-  width: 100%;
+image {
+  width: auto;
 }
 </style>

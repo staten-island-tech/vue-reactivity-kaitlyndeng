@@ -7,32 +7,9 @@
       v-for="flavor in flavors"
       :key="flavor"
       :title="flavor.type"
-      :image="flavor.image"
       :desc="flavor.desc"
+      :image="flavor.image"
     />
-
-    <!-- <h3>
-      <b>{{ flavor.type }}</b>
-    </h3>
-    <p>{{ flavor.desc }}</p> -->
-
-    <!-- <h2 v-if="vegan === 'true'">{{ flavors.type }}</h2>
-    <h2 v-else>Not vegan.</h2> -->
-
-    <!-- <input type="checkbox" id="chocolate" value="chocolate" v-model="flavors" />
-    <label for="chocolate">Chocolate</label>
-    <br />
-    <input type="checkbox" id="vanilla" value="vanilla" v-model="flavors" />
-    <label for="vanilla">Vanilla</label>
-    <br />
-    <input
-      type="checkbox"
-      id="strawberry"
-      value="strawberry"
-      v-model="flavors"
-    />
-    <label for="strawberry">Strawberry</label>
-    <br /> -->
   </div>
 </template>
 
@@ -54,7 +31,13 @@ export default {
           image:
             "https://www.eatthis.com/wp-content/uploads/sites/4/2022/06/vanilla-ice-cream.jpg?quality=82&strip=all",
         },
-        { type: "Strawberry", vegan: "true", desc: "desc" },
+        {
+          type: "Strawberry",
+          vegan: "true",
+          desc: "desc",
+          image:
+            "https://www.thespruceeats.com/thmb/kpuMkqk0BhGMTuSENf_IebbHu1s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-ice-cream-10-0b3e120e7d6f4df1be3c57c17699eb2c.jpg",
+        },
         {
           type: "Chocolate",
           vegan: "false",
