@@ -18,6 +18,10 @@ export default {
 </script>
 
 <style scoped>
+body {
+  display: flex;
+  flex-direction: row;
+}
 .card {
   width: 30%;
   font-size: 13px;
@@ -27,6 +31,6 @@ export default {
   color: black;
 }
 image {
-  width: auto;
+  width: 100%;
 }
 </style>

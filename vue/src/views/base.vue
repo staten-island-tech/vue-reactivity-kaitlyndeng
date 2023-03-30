@@ -15,10 +15,12 @@
 
 <script>
 import Card from "../components/Card.vue";
+import Button from "../components/Button.vue";
 export default {
   name: "base",
   components: {
     Card,
+    Button,
   },
   data() {
     return {
@@ -34,14 +36,14 @@ export default {
         {
           type: "Strawberry",
           vegan: "true",
-          desc: "desc",
+          desc: "Classic Strawberry",
           image:
             "https://www.thespruceeats.com/thmb/kpuMkqk0BhGMTuSENf_IebbHu1s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-ice-cream-10-0b3e120e7d6f4df1be3c57c17699eb2c.jpg",
         },
         {
           type: "Chocolate",
           vegan: "false",
-          desc: "Made with dark chocolate.",
+          desc: "Dark chocolate ice cream.",
         },
         { type: "Cookies n' Cream", vegan: "false", desc: "desc" },
         { type: "Rum Raisin", vegan: "true", desc: "desc" },
