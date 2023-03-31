@@ -10,6 +10,11 @@
       :desc="flavor.desc"
       :image="flavor.image"
     />
+    <Button
+      v-for="flavor in flavors"
+      :key="flavor"
+      @button-click="add"
+    ></Button>
   </div>
 </template>
 
@@ -25,6 +30,11 @@ export default {
   data() {
     return {
       selected: "",
+      methods: {
+        add: function () {
+          v-model="add";
+        },
+      },
       flavors: [
         {
           type: "Vanilla",

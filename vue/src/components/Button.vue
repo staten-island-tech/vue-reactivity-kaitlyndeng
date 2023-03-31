@@ -1,5 +1,5 @@
 <template>
-  <button></button>
+  <button>Add to Order</button>
 </template>
 
 <script>
