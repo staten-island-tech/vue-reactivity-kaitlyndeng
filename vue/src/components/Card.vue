@@ -1,36 +1,66 @@
 <template>
   <div class="card">
-    <h3>{{ title }}</h3>
-    <image :src="image" alt="" />
-    <h4>{{ desc }}</h4>
+    <h3>{{ type }}</h3>
+    <img :src="image" alt="" />
+    <button @click="add(), count++"> Add to Order</button>
+    <h4>Scoops: {{ count }}</h4>
   </div>
+  
 </template>
 
 <script>
+import { cart } from "../cart";
 export default {
   name: "Card",
   props: {
-    title: String,
-    desc: String,
+    type: String,
     image: String,
   },
+  methods:{
+      add(){
+        cart.cart.push({
+          name:this.type,
+          image: this.image,
+
+        })
+        console.log(cart.cart)
+      }
+    },
+    data(){
+      return{
+        count:0
+      }
+    }
 };
+  
 </script>
 
 <style scoped>
 body {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 .card {
-  width: 30%;
+  width: 50%;
   font-size: 13px;
   border-radius: 20px;
-  background-color: rgb(237, 228, 175);
+  background-color: white;
   text-align: center;
   color: black;
+  text-align: center;
+  padding: 10px;
+  margin:10px
 }
-image {
+img {
   width: 100%;
+}
+button{
+  border-radius: 50px;
+  background-color: rgb(202, 141, 193);
+  font-family: 'Gluten', cursive;
+  text-align: center;
+  padding: 10px;
+  margin:10px
 }
 </style>
